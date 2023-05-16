@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   burn_rewards:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 36
     steps:
       - uses: actions/checkout@v3
