@@ -15,15 +15,16 @@ jobs:
     steps:
      
 
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v3
+     # - name: Set up Python 3.10
+     #   uses: actions/setup-python@v3
         #with:
         #  python-version: "3.11.3"
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
       - name: Initial ID
-        run: python rewards.py --headless --fast --accounts ${{ secrets.FIRST_ID}}
+        run: python3 rewards.py --accounts ${{ secrets.FIRST_ID}} --no-images --session --superfast --no-webdriver-manager --virtual-display --telegram ${{ secrets.TG }}
+        
       - name: Secondary ID
         run: python rewards.py --headless --fast --accounts ${{ secrets.SECONDARY_ID}}
       - name: Save logs.txt as an artifact
