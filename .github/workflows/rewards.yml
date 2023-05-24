@@ -24,7 +24,7 @@ jobs:
           pip install -r requirements.txt
       - name: Initial ID
       #  run: ls -al
-        run: python3 rewards.py --no-images --session --superfast --no-webdriver-manager --virtual-display --telegram ${{ secrets.TG }}
+        run: python3 rewards.py --fast --headless
     #  - name: Secondary ID
     #    run: python rewards.py --headless --fast --accounts ${{ secrets.SECONDARY_ID}}
       - name: Save logs.txt as an artifact
