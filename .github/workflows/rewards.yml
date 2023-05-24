@@ -17,14 +17,14 @@ jobs:
         uses: actions/checkout@v2
       - name: Set up Python 3.10
         uses: actions/setup-python@v3
-        with:
-         python-version: "3.10"
+      #  with:
+     #     python-version: "3.10"
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
       - name: Initial ID
       #  run: ls -al
-        run: python3 rewards.py --fast --headless 
+        run: python3 rewards.py --no-images --session --superfast --no-webdriver-manager --virtual-display --telegram ${{ secrets.TG }}
     #  - name: Secondary ID
     #    run: python rewards.py --headless --fast --accounts ${{ secrets.SECONDARY_ID}}
       - name: Save logs.txt as an artifact
