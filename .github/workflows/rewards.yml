@@ -11,7 +11,7 @@ permissions:
 jobs:
   burn_rewards:
     runs-on: ubuntu-latest
-    timeout-minutes: 300
+    timeout-minutes: 20
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
